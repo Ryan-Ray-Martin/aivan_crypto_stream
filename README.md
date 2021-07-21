@@ -44,6 +44,8 @@
 
 #### Next, we loop through our consumer object to view the current spread of Bitcoin, formatted in our json object. With this data stream, one could create many useful applications for visualization. One could even use this data stream to train, deploy, and then serve a machine learning model to execute trades in the cryptocurrency market.
 
+#### ![alt text](https://github.com/Ryan-Ray-Martin/aivan_crypto_stream/blob/main/images/Screen%20Shot%202021-07-20%20at%206.46.21%20PM.png)
+
 ### 4. Utilize Service Integrations to Visualize Telemetry Data
 
 #### To gather telemetry data, we will use the Aiven service integration option to visualize the health of our kafka broker and data stream. On the kafka service overview menu, we will click “manage integrations” and then choose the metrics to automatically send metrics to either InfluxDB or postgres. This will create a new InfluxDB service with telemetric data from the kafka broker. 
