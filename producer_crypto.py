@@ -26,19 +26,6 @@ the polygon.io websocket, and then sends the instances to the crypto-topic
  producer."""
 
 def my_custom_process_message(message):
-    """{
-        'ev': 'XQ',
-        'pair': 'BTC-USD',
-        'lp': 0,
-        'ls': 0,
-        'bp': 31761.94,
-        'bs': 0.15739741,
-        'ap': 31778.18,
-        'as': 0.196,
-        't': 1626654317570,
-        'x': 6,
-        'r': 1626654317613
-        }"""
 
     TICK_INSTANCE = json.loads(message)[0]['ev'] == 'XQ'
     crypto_data = {}
@@ -49,7 +36,7 @@ def my_custom_process_message(message):
                 message_str['t']/1000.0).strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
             crypto_data['symbol'] = message_str['pair']
             crypto_data['spread'] = message_str['ap']-message_str['bp']
-            #print(crypto_data)
+            #print(message_str)
             producer.send('crypto-topic',value=crypto_data)
         else:
             pass

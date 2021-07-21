@@ -1,7 +1,6 @@
 # This script receives messages from a Kafka topic
 
 from kafka import KafkaConsumer
-import collections
 
 consumer = KafkaConsumer(
     "crypto-topic",
@@ -15,13 +14,8 @@ consumer = KafkaConsumer(
     ssl_keyfile="service.key",
 )
 
-# Call poll twice. First call will just assign partitions for our
-# consumer without actually returning anything
+# a simple consumer method to view topic output
 for message in consumer:
-    # message value and key are raw bytes -- decode if necessary!
-    # e.g., for unicode: `message.value.decode('utf-8')`
-    print (message.value.decode('utf-8'))
-
-# Commit offsets so we won't get the same messages again
+    print(message.value.decode('utf-8'))
 
 #consumer.commit()
