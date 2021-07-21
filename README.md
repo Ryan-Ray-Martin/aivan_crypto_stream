@@ -1,6 +1,6 @@
 # Aiven Kafka Quickstart with Polygon.io Websocket
 
-### A demonstration on streaming cryptocurrency data in realtime with Aiven services.
+### A demonstration for streaming cryptocurrency data in realtime with Aiven services.
 
 #### In this demonstration, we will show how to stream cryptocurrency quotes in real-time from the polygon.io websocket. With this stream, we will then structure the json data to reflect only the spread for the given instrument, which is the difference between the bid and ask price. We will then convert the timestamp to a string with the date in “ISO 8601” format for better readability. 
 
@@ -70,7 +70,7 @@
 
 #### ![alt_text](https://github.com/Ryan-Ray-Martin/aivan_crypto_stream/blob/main/images/Screen%20Shot%202021-07-20%20at%208.33.18%20PM.png)
 
-#### Under Grafana’s general tab, we will be able to view metric from our Kafka service. 
+#### Under Grafana’s general tab, we will be able to view metrics from our Kafka service. 
 
 #### ![alt_text](https://github.com/Ryan-Ray-Martin/aivan_crypto_stream/blob/main/images/Screen%20Shot%202021-07-20%20at%208.34.08%20PM.png)
 
